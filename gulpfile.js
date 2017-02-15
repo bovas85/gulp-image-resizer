@@ -14,7 +14,7 @@ var uglify = require('gulp-uglify');
 var imageMin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 
-gulp.task('imageResize', function () {
+gulp.task('image', function () {
   gulp.src('images/src/**/*')
     .pipe(plumber({
             handleError: function (err) {
@@ -78,19 +78,7 @@ gulp.task('html',function(){
         }))
         .pipe(gulp.dest('./'))
 });
-gulp.task('image',function(){
-    gulp.src(['images/src/**/*'])
-        .pipe(plumber({
-            handleError: function (err) {
-                console.log(err);
-                this.emit('end');
-            }
-        }))
-        .pipe(cache(imageMin({
-            progressive: true
-        })))
-        .pipe(gulp.dest('images/dist'))
-});
+
 gulp.task('default',function(){
     gulp.watch('js/src/**/*.js',['js']);
     gulp.watch('css/src/**/*.css',['css']);
