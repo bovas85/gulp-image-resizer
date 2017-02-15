@@ -2,8 +2,10 @@
 
 Install with npm
 
-npm install --save-dev gulp-image-resize
+`npm install --save-dev gulp-image-resize`
+
 GraphicsMagick and ImageMagick
+
 Make sure GraphicsMagick and ImageMagick are installed on your system and properly set up in your PATH.
 
 Windows & others:
@@ -11,10 +13,11 @@ Windows & others:
 http://www.imagemagick.org/script/binary-releases.php
 http://www.graphicsmagick.org/download.html
 
-Confirm that ImageMagick is properly set up by executing convert -help in a terminal.
-Confirm that Gm is properly set up by executing gm -help in a terminal.
+Confirm that ImageMagick is properly set up by executing `convert -help` in a terminal.  
+Confirm that Gm is properly set up by executing `gm -help` in a terminal.
 
-Example
+Example  
+```
 var gulp = require('gulp');
 var imageResize = require('gulp-image-resize');
  
@@ -28,11 +31,12 @@ gulp.task('default', function () {
     }))
     .pipe(gulp.dest('dist'));
 });
+```
 
 # API
 
 imageResize(options)
-
+```
 options.width
 Type: Number
 Default value: 0 (only if height is defined)
@@ -130,8 +134,10 @@ Type: Number
 Default value: null
 
 The value that you want the image to be scaled to.
+```
 
 # More Examples
+
 ```
 // Converting from png to jpeg. No resizing. 
 gulp.task('convert_png', function () {
@@ -194,10 +200,13 @@ gulp.task("suffix", function () {
 ```
 
 # Tests
-You need both ImageMagick and GraphicsMagick installed on your system to run the tests.
-Install all npm dev dependencies npm install
-Install gulp globally npm install -g gulp
-Run gulp test
+You need both ImageMagick and GraphicsMagick installed on your system to run the tests.  
+Install all npm dev dependencies `npm install`  
+Install gulp globally `npm install -g gulp`  
+Run `gulp test`
+
+# Errors 
+http://stackoverflow.com/questions/41071318/error-eof-when-trying-to-resize-images-using-gulp-on-windows
 
 # License
 MIT © scalable minds
