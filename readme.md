@@ -206,7 +206,8 @@ Install gulp globally `npm install -g gulp`
 Run `gulp test`
 
 # Errors 
-http://stackoverflow.com/questions/41071318/error-eof-when-trying-to-resize-images-using-gulp-on-windows
+http://stackoverflow.com/questions/41071318/error-eof-when-trying-to-resize-images-using-gulp-on-windows  
+Don't run gulp commands from VS Code as its terminal is 32bit and you need 64bit
 
 # License
 MIT © scalable minds
